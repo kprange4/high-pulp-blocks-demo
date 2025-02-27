@@ -1,12 +1,15 @@
 import {createHigherOrderComponent} from "@wordpress/compose";
 import {Fragment} from "@wordpress/element";
 import {InspectorControls, PlainText} from "@wordpress/block-editor";
-import {PanelBody, PanelRow, SelectControl} from "@wordpress/components";
+import {PanelBody, PanelRow, SelectControl, RangeControl, ColorPalette} from "@wordpress/components";
 import {addFilter} from "@wordpress/hooks";
 import React from "react";
+import {select} from '@wordpress/data';
+
 
 // create a wrapper function which will receive the block we are trying to wrap
 function blockWrapper(WrappedBlock) {
+	let settings = select('core/editor').getEditorSettings();
 	// return a React component
 	return class extends React.Component {
 		render() {
@@ -14,9 +17,10 @@ function blockWrapper(WrappedBlock) {
 
 			let divStyles = {
 				borderStyle: attributes.bcBorderStyle || "none",
-				borderWidth: "2px",
-				borderColor: "black",
+				borderWidth: (attributes.bcWidth || 0) + 'px',
+				borderColor: attributes.bcColor || "black",
 				padding: (attributes.bcPadding || 0) + 'px',
+				borderRadius: (attributes.bcRadius || 0) + 'px',
 			};
 
 			// don't apply styles if there is no border
@@ -43,12 +47,36 @@ function blockWrapper(WrappedBlock) {
 								/>
 							</PanelRow>
 							<PanelRow>
-								<label>Padding<br />
-								<input type="number"
-									value={attributes.bcPadding}
-									onChange={e => setAttributes({bcPadding: parseInt(e.target.value)})}
-								/> px
+								<label>Padding<br/>
+									<input type="number"
+										   value={attributes.bcPadding}
+										   onChange={e => setAttributes({bcPadding: parseInt(e.target.value)})}
+									/> px
 								</label>
+							</PanelRow>
+							<br/>
+							<RangeControl
+								label="Border Width"
+								value={attributes.bcWidth}
+								onChange={(bcWidth) => setAttributes({bcWidth})}
+								min={0.5}
+								max={5}
+								step={0.5}
+							/>
+							<RangeControl
+								label="Border Radius"
+								value={attributes.bcRadius}
+								onChange={(bcRadius) => setAttributes({bcRadius})}
+								min={0}
+								max={10}
+								step={1}
+							/>
+							<PanelRow>
+								<ColorPalette
+									colors={settings.colors}
+									value={attributes.bcColor}
+									onChange={bcColor => setAttributes({bcColor})}
+								/>
 							</PanelRow>
 						</PanelBody>
 					</InspectorControls>
