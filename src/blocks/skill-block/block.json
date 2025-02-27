@@ -1,0 +1,20 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "kp/skill-block",
+	"version": "0.1.0",
+	"title": "Skills",
+	"category": "design",
+	"icon": "lightbulb",
+	"description": "Display your skills",
+	"example": {},
+	"supports": {
+		"html": false
+	},
+	"textdomain": "skill-block",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"viewScript": "file:./view.js",
+	"keywords": ["skills", "program", "kp"]
+}

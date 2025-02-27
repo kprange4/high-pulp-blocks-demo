@@ -1,0 +1,39 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "kp/kp-hw-block",
+  "version": "0.1.0",
+  "title": "Homework Block",
+  "category": "design",
+  "icon": "text",
+  "description": "This block is for the homework.",
+  "example": {},
+  "supports": {
+    "html": false
+  },
+  "textdomain": "kp-hw-block",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "viewScript": "file:./view.js",
+  "keywords": [
+    "skills",
+    "program"
+  ],
+  "attributes": {
+    "iconURL": {
+      "type": "string",
+      "default": "https://place-hold.it/75"
+    },
+    "name": {
+      "type": "string",
+      "source": "html",
+      "selector": ".skill-name"
+    },
+    "category": {
+      "type": "string",
+      "source": "html",
+      "selector": ".skill-category"
+    }
+  }
+}

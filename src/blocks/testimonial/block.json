@@ -1,0 +1,46 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "kp/testimonial",
+	"version": "0.1.0",
+	"title": "Testimonial",
+	"category": "design",
+	"icon": "testimonial",
+	"description": "Best testimonial block ever!",
+	"example": {},
+	"supports": {
+		"html": false
+	},
+	"textdomain": "testimonial",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"viewScript": "file:./view.js",
+	"keywords": ["wctc", "high pulp", "kp"],
+	"attributes": {
+		"quote": {
+			"type": "string",
+			"source": "html",
+			"selector": ".quote"
+		},
+		"author": {
+			"type": "string",
+			"source": "html",
+			"selector": ".author"
+		},
+		"stars": {
+			"type": "number",
+			"default": 5
+		},
+		"avatarURL": {
+			"type": "string",
+			"default": "https://place-hold.it/75"
+		},
+		"backgroundColor": {
+			"type": "string"
+		},
+		"textColor": {
+			"type": "string"
+		}
+	}
+}

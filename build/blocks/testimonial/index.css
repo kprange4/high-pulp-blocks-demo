@@ -1,0 +1,32 @@
+/*!***********************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/blocks/testimonial/editor.scss ***!
+  \***********************************************************************************************************************************************************************************************************************************************************/
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+.wp-block-kp-testimonial {
+  border: 2px dashed #f00;
+}
+.wp-block-kp-testimonial textarea, .wp-block-kp-testimonial input[type=text] {
+  background-color: #FCFCFC;
+}
+.wp-block-kp-testimonial .photo img {
+  pointer-events: all;
+  cursor: pointer;
+}
+/*!*******************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/components/StarRating.scss ***!
+  \*******************************************************************************************************************************************************************************************************************************************************/
+.stars .star:hover {
+  cursor: pointer;
+}
+.stars .star.on {
+  color: #FFD700;
+}
+.stars .star.off {
+  color: grey;
+}
+
+/*# sourceMappingURL=index.css.map*/
