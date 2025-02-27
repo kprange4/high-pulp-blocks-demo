@@ -1,22 +1,27 @@
-import { addFilter } from "@wordpress/hooks";
+import {addFilter} from "@wordpress/hooks";
 
 function addBorderAttributes(settings, name) {
-  // settings is the object used to declare the block
-  // name is the name of the block (if you wanted to apply this only certain blocks)
+	// settings is the object used to declare the block
+	// name is the name of the block (if you wanted to apply this only certain blocks)
 
-  // append the settings
-  settings.attributes.bcBorderStyle = {
-    type: "string",
-    default: "",
-  };
+	// append the settings
+	settings.attributes.bcBorderStyle = {
+		type: "string",
+		default: "",
+	};
 
-  // (modify any additional settings)
+	settings.attributes.bcPadding = {
+		type: "number",
+		default: "10",
+	};
 
-  return settings;
+	// (modify any additional settings)
+
+	return settings;
 }
 
 addFilter(
-  "blocks.registerBlockType",
-  "your-plugin-name/border-control/add-border-attributes",
-  addBorderAttributes,
+	"blocks.registerBlockType",
+	"kp/border-control/add-border-attributes",
+	addBorderAttributes,
 );

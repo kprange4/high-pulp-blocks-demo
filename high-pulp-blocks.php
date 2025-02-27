@@ -27,5 +27,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 function kp_high_pulp_blocks_block_init() {
 	register_block_type( __DIR__ . '/build/blocks/high-pulp-blocks' );
 	register_block_type( __DIR__ . '/build/blocks/testimonial' );
+	register_block_type( __DIR__ . '/build/filters/border-control' );
 }
 add_action( 'init', 'kp_high_pulp_blocks_block_init' );
+
+// includes
+include __DIR__ . '/filters.php';
