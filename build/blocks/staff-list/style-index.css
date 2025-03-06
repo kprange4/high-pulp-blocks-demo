@@ -1,0 +1,73 @@
+/*!*********************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/blocks/staff-list/style.scss ***!
+  \*********************************************************************************************************************************************************************************************************************************************************/
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+.wp-block-kp-staff-list {
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.wp-block-kp-staff-list .flip-card {
+  display: block;
+  background-color: transparent;
+  width: 250px;
+  height: 250px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px;
+  margin: 5px;
+}
+.wp-block-kp-staff-list .flip-card .flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+.wp-block-kp-staff-list .flip-card .flip-card-inner .flip-card-front, .wp-block-kp-staff-list .flip-card .flip-card-inner .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%; /* Safari */
+  backface-visibility: hidden;
+}
+.wp-block-kp-staff-list .flip-card .flip-card-inner .flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+.wp-block-kp-staff-list .flip-card .flip-card-inner .flip-card-front img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.wp-block-kp-staff-list .flip-card .flip-card-inner .flip-card-back {
+  background-color: dodgerblue;
+  color: white;
+  transform: rotateY(180deg);
+}
+.wp-block-kp-staff-list .flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+.wp-block-kp-staff-list .flip-card .name {
+  font-weight: bold;
+  margin-bottom: 0;
+}
+.wp-block-kp-staff-list .flip-card .position {
+  margin: 0;
+}
+.wp-block-kp-staff-list .flip-card .bio {
+  margin: 10px;
+  padding: 10px;
+  border-top: 2px solid rgba(0, 0, 0, 0.4666666667);
+  text-align: left;
+}
+.wp-block-kp-staff-list .flip-card p {
+  margin: 0 0 10px 0;
+}
+
+/*# sourceMappingURL=style-index.css.map*/

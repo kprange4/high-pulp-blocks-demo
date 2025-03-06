@@ -28,3 +28,17 @@ function kp_add_borders( $block_content = '', $block = [] ) {
 }
 
 add_filter( 'render_block', 'kp_add_borders', 10, 2 );
+
+add_filter('block_type_metadata', function ($metadata){
+	$additionalMetadata = [
+		'attributes' => [
+			'bcBorderStyle' => ['type' => 'string'],
+			'bcPadding' => ['type' => 'number'],
+			'bcWidth' => ['type' => 'number'],
+			'bcRadius' => ['type' => 'number'],
+			'bcColor' => ['type' => 'string'],
+		]
+	];
+
+	return array_merge_recursive($metadata, $additionalMetadata);
+});
